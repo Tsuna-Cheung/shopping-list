@@ -114,11 +114,24 @@ function createMarker(place) {
 // Error callback
 
 function onPlacesError(error) {
-    // 改成手机版的alert
-    console.log('code: ' + error.code + '\n' +
+
+    //console.log('code: ' + error.code + '\n' +
+        //'message: ' + error.message + '\n');
+    createAlert('code: ' + error.code + '\n' +
         'message: ' + error.message + '\n');
+    
 }
 
+function createAlert(alertTxt) {
+
+	navigator.notification.alert(
+    '',  // message
+    alertDismissed,         // callback
+    alertTxt,            // title
+    'Done'                  // buttonName
+);
+
+}
 // Watch your changing position
 
 function watchPlacesPosition() {
