@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "mob.app.dev.shoppingList"
+        version   = "1.0.0">
+
+    <name>Shopping List</name>
+
+    <description>
+        A Shopping List Application
+    </description>
+
+    <author>
+        Zhongfang Zhang
+    </author>
+
+    <preference name="phonegap-version" value="cli-7.0.1" />
+	
+    <preference name="permissions"                value="none"/>   
+	
+	<access origin="*"/>
+    <edit-config target="NSContactsUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need contacts access to search friends</string>
+    </edit-config>
+   	<plugin name="cordova-plugin-whitelist" version="1" />
+   	<plugin name="cordova-plugin-contacts" spec="~3.0.1" />
+</widget>

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*#page1{
+    width: 375px;
+    height: 667px;
+}*/
+.chkbox{
+    margin-top: 12px;
+}
+#dataTable{
+    width:100%;
+}
+.horizontalUl>li{ 
+    float:left;
+    list-style:none;
+    margin-left: 5%;
+}

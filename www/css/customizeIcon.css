@@ -1,0 +1,25 @@
+.ui-icon-guideIcon_normal:after{
+            background: url(../img/guide_normal.png) 50% 50% no-repeat; background-size: 22px 22px;
+    border-radius: 0;
+        }
+.ui-icon-guideIcon_hover:after{
+            background: url(../img/guide_hover.png) 50% 50% no-repeat; background-size: 22px 22px;
+    border-radius: 0;
+        }
+.ui-icon-tasksIcon_normal:after{
+            background: url(../img/tasks_normal.png) 50% 50% no-repeat; background-size: 22px 22px;
+    border-radius: 0;
+        }
+.ui-icon-tasksIcon_hover:after{
+            background: url(../img/tasks_hover.png) 50% 50% no-repeat; background-size: 22px 22px;
+    border-radius: 0;
+        }
+.ui-icon-homeIcon_normal:after{
+            background: url(../img/home2_normal.png) 50% 50% no-repeat; background-size: 22px 22px;
+    border-radius: 0;
+        }
+
+.ui-icon-homeIcon_hover:after{
+            background: url(../img/home2_hover.png) 50% 50% no-repeat; background-size: 22px 22px;
+    border-radius: 0;
+        }
