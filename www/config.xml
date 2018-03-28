@@ -26,4 +26,6 @@
     </edit-config>
    	<plugin name="cordova-plugin-whitelist" version="1" />
    	<plugin name="cordova-plugin-contacts" spec="~3.0.1" />
+    <plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
+    <plugin name="cordova-plugin-local-notification" version="0.8" />
 </widget>
