@@ -10,7 +10,7 @@ function createPrompt(){
     '',  // message
     onPrompt,                  // callback to invoke
     'Add a new item',            // title
-    ['Done','Cancel'],             // buttonLabels
+    ['Done','Cancel']             // buttonLabels
 );
 }
 
@@ -34,8 +34,8 @@ function createNewItem(userInputTxt)
     {  
         if (Item == "")  
         {   
+            navigator.vibrate(); 
             createAlert("Item cannot be empty!");
-            navigator.vibrate(3000);
             console.log("vibrate");
         }  
         else  
@@ -179,8 +179,8 @@ function saveShoppingList()
             let textbox = row.cells[1].childNodes[0];
             
             if(textbox.value == ""){
+                    navigator.vibrate(); 
                     createAlert("Item can't be empty!");
-                    navigator.vibrate(3000);
                     console.log("vibrate");
                 }
             else{
@@ -270,7 +270,7 @@ function removePurchasedItems()
      
     saveShoppingList();  
     createAlert("Purchased Items Were Cleared Successfully.");
-    navigator.vibrate(3000);
+    navigator.vibrate();
     console.log("vibrate");
 }  
 
