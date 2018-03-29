@@ -35,6 +35,7 @@ function createNewItem(userInputTxt)
         if (Item == "")  
         {   
             createAlert("Item cannot be empty!");
+            navigator.vibrate(1000);
         }  
         else  
         {  
@@ -178,6 +179,7 @@ function saveShoppingList()
             
             if(textbox.value == ""){
                     createAlert("Item can't be empty!");
+                    navigator.vibrate(1000);
                 }
             else{
                 textValue = textbox.value;  
@@ -266,6 +268,7 @@ function removePurchasedItems()
      
     saveShoppingList();  
     createAlert("Purchased Items Were Cleared Successfully.");
+    navigator.vibrate(1000);
 }  
 
 function createAlert(alertTxt) {
