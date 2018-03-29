@@ -35,7 +35,8 @@ function createNewItem(userInputTxt)
         if (Item == "")  
         {   
             createAlert("Item cannot be empty!");
-            navigator.vibrate(1000);
+            navigator.vibrate(3000);
+            console.log("vibrate");
         }  
         else  
         {  
@@ -179,7 +180,8 @@ function saveShoppingList()
             
             if(textbox.value == ""){
                     createAlert("Item can't be empty!");
-                    navigator.vibrate(1000);
+                    navigator.vibrate(3000);
+                    console.log("vibrate");
                 }
             else{
                 textValue = textbox.value;  
@@ -268,7 +270,8 @@ function removePurchasedItems()
      
     saveShoppingList();  
     createAlert("Purchased Items Were Cleared Successfully.");
-    navigator.vibrate(1000);
+    navigator.vibrate(3000);
+    console.log("vibrate");
 }  
 
 function createAlert(alertTxt) {
