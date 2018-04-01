@@ -5,6 +5,7 @@ $(document).ready(function() {
     $('#deletePBtn').click(removePurchasedItems);
 });
 
+// promopt
 function createPrompt(){
     navigator.notification.prompt(
     '',  // message
@@ -14,6 +15,7 @@ function createPrompt(){
 );
 }
 
+// promopt callback
 function onPrompt(results) {
         if(results.buttonIndex == '1'){
                 createNewItem(results.input1);
@@ -23,7 +25,7 @@ function onPrompt(results) {
         }
     }
     
-//创建一个新商品 
+//Add a new item 
 function createNewItem(userInputTxt)  
 {  
     var shoppingList = {};  
@@ -50,6 +52,7 @@ function createNewItem(userInputTxt)
    
 }
 
+//Add the item to the tilst
 var rowID = 0;  
 function addTableRow(shoppingList, appIsLoading)  
 {  
@@ -67,7 +70,7 @@ function addTableRow(shoppingList, appIsLoading)
     element1.setAttribute("onclick", "checkboxClicked()");  
     cell1.appendChild(element1);  
    
-    //输入框 
+    //text input area
     var cell2 = row.insertCell(1);  
     var element2 = document.createElement("input");  
     element2.type = "text";  
@@ -79,7 +82,7 @@ function addTableRow(shoppingList, appIsLoading)
     element2.setAttribute("onchange", "saveShoppingList()");  
     cell2.appendChild(element2);  
    
-    //查看按钮
+    //create a "view" button
     var cell3 = row.insertCell(2);  
     var element3 = document.createElement("input");  
     element3.type = "button";  
@@ -89,7 +92,7 @@ function addTableRow(shoppingList, appIsLoading)
     element3.setAttribute("onclick", "viewSelectedRow(document.getElementById('text' + this.id))");  
     cell3.appendChild(element3);  
    
-    //删除按钮
+    //create a "delete" button
     var cell4 = row.insertCell(3);  
     var element4 = document.createElement("input");  
     element4.type = "button";
@@ -107,7 +110,7 @@ function addTableRow(shoppingList, appIsLoading)
 }  
 
 
-
+//when the checkbox be clicked
 function checkboxClicked()  
 {  
     var table = document.getElementById("dataTable");  
@@ -137,13 +140,13 @@ function checkboxClicked()
 }  
 
 
-//alert商品的名字
+//alert the name of the item
 function viewSelectedRow(itemName)  
 {  
     createAlert(itemName.value); 
 }  
 
-//删除选中行
+//delete the selected row
 function deleteSelectedRow(deleteButton)  
 {  
     let p = deleteButton.parentNode.parentNode;  
@@ -151,7 +154,7 @@ function deleteSelectedRow(deleteButton)
     saveShoppingList();  
 }  
 
-//保存shopping list  
+//save shopping list  
 function saveShoppingList()  
 {  
     var listArray = {};  
@@ -202,11 +205,13 @@ function saveShoppingList()
     saveAsJSON(listArray);
 }  
 
+//using local storage(JSON) to store the list
 function saveAsJSON(listArray){
     window.localStorage.setItem("shoppingList", JSON.stringify(listArray)); 
     console.log("Save as JSON successfully.")
 }
 
+//load the shopping list
 function loadShoppingList()  
 {   
     var theList = JSON.parse(window.localStorage.getItem("shoppingList")); 
@@ -235,6 +240,7 @@ function loadShoppingList()
     }  
 }  
 
+// clear the table
 function deleteAllRows()  
 {  
     let table = document.getElementById("dataTable");  
@@ -250,7 +256,7 @@ function deleteAllRows()
     saveShoppingList();  
 }  
 
-// 删除已购买的商品
+// delete all the purchased goods(checkbox been clicked)
 function removePurchasedItems()  
 {  
     let table = document.getElementById("dataTable");  
@@ -274,6 +280,7 @@ function removePurchasedItems()
     console.log("vibrate");
 }  
 
+//alert
 function createAlert(alertTxt) {
 
 	navigator.notification.alert(
@@ -284,6 +291,8 @@ function createAlert(alertTxt) {
 );
 
 }
+
+//alert callback
 function alertDismissed() {
     console.log("dialog shown");
 }
