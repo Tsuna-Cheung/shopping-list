@@ -4,12 +4,19 @@ var Latitude = undefined;
 var Longitude = undefined;
 
 // Get geo coordinates
+//$(document).ready(function() { 
+//   getPlacesLocation();
+//    console.log("init map");
+//});
+
 $(document).ready(function() { 
-   getPlacesLocation();
-    console.log("init map");
+   $('#gotoMap1').click(getPlacesLocation);
+   $('#gotoMap2').click(getPlacesLocation);
 });
 
+
 function getPlacesLocation() {
+    console.log("init map");
     navigator.geolocation.getCurrentPosition
     (onPlacesSuccess, onPlacesError, { enableHighAccuracy: true });
 }
