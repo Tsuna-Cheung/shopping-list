@@ -36,7 +36,7 @@ function createNewItem(userInputTxt)
     {  
         if (Item == "")  
         {   
-            navigator.vibrate(3000); 
+            navigator.vibrate(); 
             createAlert("Item cannot be empty!");
             console.log("vibrate");
         }  
