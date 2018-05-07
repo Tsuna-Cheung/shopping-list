@@ -8,6 +8,14 @@
     Besides, using various libaray such as jQuery Mobile and Bootstrap to get a hign level of UI and UX design.
 
 ## Screenshots
+### Home page
+![Home_page](./www/img/1.png)
+
+### Shopping List page
+![Shopping_List_page](./www/img/2.png)
+
+### Map page
+![Map_page](./www/img/3.png)
 
 ## Features
 	1. On the Home page, there are two buttons, namely, Functions button and What's New button. 
