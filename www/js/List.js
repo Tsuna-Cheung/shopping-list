@@ -160,9 +160,7 @@ function saveShoppingList()
     var listArray = {};  
     var checkBoxState = 0;  
     var textValue = "";  
-   
     let table = document.getElementById("dataTable");  
-   
     let rowCount = table.rows.length;
     if (rowCount != 0)  
     {  
@@ -178,9 +176,7 @@ function saveShoppingList()
             {  
                 checkBoxState= 0;  
             }  
-   
             let textbox = row.cells[1].childNodes[0];
-            
             if(textbox.value == ""){
                     navigator.vibrate(); 
                     createAlert("Item can't be empty!");
@@ -191,10 +187,7 @@ function saveShoppingList()
                 listArray["row" + i] =  
                     {   check : checkBoxState,  
                         text : textValue};  
-                
             }
-   
-            
         }  
     }  
     else  
@@ -275,7 +268,7 @@ function removePurchasedItems()
     }  
      
     saveShoppingList();  
-    createAlert("Purchased Items Were Cleared Successfully.");
+    alert("Purchased Items Were Cleared Successfully.");
     navigator.vibrate();
     console.log("vibrate");
 }  
