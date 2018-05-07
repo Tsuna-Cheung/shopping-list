@@ -1,8 +1,11 @@
 # Shopping List
-	Shopping List is a completely free mobile application for iOS, which classified as a lifestyle category. It allows users easily record and edit their own shopping list. Users can list the goods they want to purchase on the app before going shopping, so that they don’t have to worry about finding that some goods have forgotten to purchase after the shopping finish.
+	Shopping List is a completely free mobile application for iOS, which classified as a lifestyle category. 
+    It allows users easily record and edit their own shopping list. 
+    Users can list the goods they want to purchase on the app before going shopping, so that they don’t have to worry about finding that some goods have forgotten to purchase after the shopping finish.
 
 ## Tech/framework used
-	Shopping List app is a Phonegap Build project, which programmed in HTML,CSS and Javascript. Besides, using various libaray such as jQuery Mobile and Bootstrap to get a hign level of UI and UX design.
+	Shopping List app is a Phonegap Build project, which programmed in HTML,CSS and Javascript. 
+    Besides, using various libaray such as jQuery Mobile and Bootstrap to get a hign level of UI and UX design.
 
 ## Screenshots
 
