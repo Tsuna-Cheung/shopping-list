@@ -268,7 +268,7 @@ function removePurchasedItems()
     }  
      
     saveShoppingList();  
-    alert("Purchased Items Were Cleared Successfully.");
+    createAlert("Purchased Items Were Cleared Successfully.");
     navigator.vibrate();
     console.log("vibrate");
 }  
